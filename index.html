@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,16 +6,32 @@
   <link rel="icon" href="favicon.ico" type="image/x-icon">
   <link rel="icon" type="image/png" href="favicon.png">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Google Analytics Placeholder -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PLACEHOLDER123"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-PLACEHOLDER123');
+  </script>
+
   <style>
     body {
-      font-family: sans-serif;
+      font-family: Arial, sans-serif;
       margin: 0;
       padding: 0;
+      background-color: #f4f4f4;
     }
-    header, footer {
-      background-color: #1f3a1f;
+    header {
+      background-color: #205d3d;
       color: white;
       padding: 1rem;
+      text-align: center;
+    }
+    nav {
+      background-color: #2a8a5f;
+      padding: 0.5rem;
       text-align: center;
     }
     nav a {
@@ -24,44 +39,43 @@
       margin: 0 1rem;
       text-decoration: none;
     }
-    main {
+    .hero {
       padding: 2rem;
-      max-width: 900px;
-      margin: auto;
       text-align: center;
+      background: white;
     }
-    a.cta {
-      display: inline-block;
-      margin-top: 1.5rem;
-      background-color: #1f3a1f;
-      color: white;
-      padding: 1rem 2rem;
-      border-radius: 6px;
-      text-decoration: none;
+    .hero h1 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+    .hero p {
+      font-size: 1.2rem;
+      margin-bottom: 1.5rem;
+    }
+    .cta {
+      padding: 0.75rem 1.5rem;
       font-size: 1rem;
-      font-weight: bold;
-    }
-    a.cta:hover {
-      background-color: #2e5932;
+      background-color: #2a8a5f;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      text-decoration: none;
     }
   </style>
 </head>
 <body>
   <header>
     <h1>M.Durham Properties and Rentals</h1>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="properties_page.html">Properties</a>
-      <a href="about_contact.html">About & Contact</a>
-    </nav>
   </header>
-  <main>
-    <h2>Your Dream Property Awaits</h2>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="properties_page.html">Listings</a>
+    <a href="about_contact.html">About & Contact</a>
+  </nav>
+  <div class="hero">
+    <h1>Your Dream Property Awaits</h1>
     <p>Welcome to M.Durham Properties and Rentals, your premier partner in finding exceptional properties and stress-free rental solutions. With deep roots in the local market, we offer expert guidance and personalized service to help you discover the perfect home or investment.</p>
-    <p><a class="cta" href="properties_page.html">Explore Our Listings Today</a></p>
-  </main>
-  <footer>
-    <p>© 2025 M.Durham Properties and Rentals</p>
-  </footer>
+    <a href="properties_page.html" class="cta">Explore Our Listings</a>
+  </div>
 </body>
 </html>
