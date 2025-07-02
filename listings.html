@@ -4,38 +4,33 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Listings | M.Durham Properties</title>
-  <link rel="stylesheet" href="style.css" />
+  <title>Listings - M.Durham Properties</title>
+  <link rel="icon" href="favicon.ico" type="image/x-icon"/>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
   <header>
-    <h1>Listings</h1>
+    <img src="logo.png" alt="M.Durham Logo" class="logo"/>
     <nav>
       <a href="index.html">Home</a>
       <a href="listings.html">Listings</a>
-      <a href="about.html">About & Contact</a>
+      <a href="about-contact.html">About & Contact</a>
     </nav>
   </header>
   <main>
-    <section class="property-card">
-      <img src="edwards-house.jpg" alt="Main view of Bridgeport house" class="main-property-image" />
-      <h2>Bridgeport 3-Bedroom Family Home</h2>
-      <p><strong>Location:</strong> 176 Edwards Street, Bridgeport, CT</p>
-      <p><strong>Price:</strong> $199,000 or $1,366/mo Rent</p>
-      <p><strong>Type:</strong> Single Family Residence</p>
-      <p><strong>Size:</strong> 1,516 sqft (Lot: 4,791.6 sqft)</p>
-      <p><strong>Highlights:</strong> Hardwood floors, Spacious bedrooms</p>
+    <h1 class="page-title">Bridgeport 3-Bedroom Family Home</h1>
+    <div class="listing">
+      <img src="house1.jpg" alt="Bridgeport House">
+      <ul>
+        <li><strong>Location:</strong> 176 Edwards Street, Bridgeport, CT</li>
+        <li><strong>Price:</strong> $199,000 or $1,366/mo Rent</li>
+        <li><strong>Type:</strong> Single Family Residence</li>
+        <li><strong>Size:</strong> 1,516 sqft (Lot: 4,791.6 sqft)</li>
+        <li><strong>Highlights:</strong> Hardwood floors, Spacious bedrooms</li>
+      </ul>
       <p><em>Note: Home has fire damage. Motivated to sell — bring ALL offers!</em></p>
-      <div class="buttons">
-        <a href="mailto:milodurham548@gmail.com?subject=Request%20Tour%20for%20176%20Edwards%20St" class="btn">Request Tour</a>
-        <button onclick="document.getElementById('gallery').style.display='block'" class="btn">View Images</button>
-      </div>
-      <div id="gallery" style="display:none; margin-top: 20px;">
-        <h3>Gallery</h3>
-        <img src="edwards-kitchen.jpg" alt="Kitchen" class="gallery-img" />
-        <img src="edwards-bedroom.jpg" alt="Bedroom" class="gallery-img" />
-      </div>
-    </section>
+      <a href="#" class="button">Request Tour</a>
+    </div>
   </main>
 </body>
 </html>
