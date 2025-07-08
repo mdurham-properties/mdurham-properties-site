@@ -1,0 +1,44 @@
+body {
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+}
+header {
+  background-color: #165a31;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+}
+header .logo {
+  height: 40px;
+}
+nav a {
+  color: white;
+  text-decoration: none;
+  margin: 0 10px;
+}
+main {
+  padding: 20px;
+}
+.hero {
+  text-align: center;
+  padding: 40px 20px;
+  background-color: #e5f4e1;
+}
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #165a31;
+  color: white;
+  text-decoration: none;
+  margin-top: 10px;
+  border-radius: 5px;
+}
+.property-image {
+  width: 100%;
+  max-width: 500px;
+  display: block;
+  margin-bottom: 10px;
+}
