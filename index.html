@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>M.Durham Properties & Rentals — Your Dream Property Awaits</title>
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="preload" href="assets/styles.css" as="style">
+  <link rel="stylesheet" href="assets/styles.css">
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js" defer></script>
+  <script src="assets/main.js" defer></script>
+</head>
+<body>
+  <header class="header">
+    <div class="container nav">
+      <div class="logo">
+        <a href="index.html">M.Durham Properties & Rentals</a>
+        <small>Real Estate • Sales & Rentals</small>
+      </div>
+      <nav class="navlinks">
+        <a href="index.html">Home</a>
+        <a href="properties.html">Properties</a>
+        <a href="about.html">About</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container">
+        <span class="kicker">Your Dream Property Awaits</span>
+        <h1>Find exceptional homes with stress‑free rentals and sales.</h1>
+        <p>
+          Welcome to <strong>M.Durham Properties & Rentals</strong>, your premier partner in finding exceptional properties and
+          stress‑free rental solutions. With deep roots in the local market, we offer expert guidance and personalized service
+          to help you discover the perfect home or investment.
+        </p>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="properties.html">Explore Our Listings</a>
+          <a class="btn btn-outline" href="about.html">Meet the Founder</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container grid">
+        <div class="card">
+          <h3>Why choose us</h3>
+          <p>Local expertise, transparent guidance, and a people‑first approach—so every decision feels confident.</p>
+        </div>
+        <div class="card">
+          <h3>Buy or Rent with clarity</h3>
+          <p>Clear pricing, helpful walkthroughs, and support from first look to final handshake.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container inner">
+      <span>© <span id="year"></span> M.Durham Properties & Rentals. All rights reserved.</span>
+      <a href="properties.html">Browse Listings</a>
+    </div>
+  </footer>
+
+  <button id="backToTop" onclick="backToTop()" aria-label="Back to top">↑</button>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>

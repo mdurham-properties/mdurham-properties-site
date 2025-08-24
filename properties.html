@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Properties — M.Durham Properties & Rentals</title>
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="stylesheet" href="assets/styles.css">
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js" defer></script>
+  <script src="assets/main.js" defer></script>
+</head>
+<body>
+<header class="header">
+  <div class="container nav">
+    <div class="logo">
+      <a href="index.html">M.Durham Properties & Rentals</a>
+      <small>Real Estate • Sales & Rentals</small>
+    </div>
+    <nav class="navlinks">
+      <a href="index.html">Home</a>
+      <a href="properties.html">Properties</a>
+      <a href="about.html">About</a>
+    </nav>
+  </div>
+</header>
+
+<main class="section">
+  <div class="container">
+    <h1>Available Property</h1>
+
+    <article class="section">
+      <h2>176 Edwards Street, Bridgeport, CT 06606</h2>
+      <p class="small">Single Family Residence • Built in 1919 • Lot 4,791.6 sqft</p>
+
+      <div class="gallery">
+        <img id="galleryMain" class="gallery-main" src="assets/images/edwards_1.png" alt="176 Edwards Street main image">
+        <div class="thumbs">
+          <img src="assets/images/edwards_1.png" alt="Image 1" onclick="setMain('assets/images/edwards_1.png')">
+          <img src="assets/images/edwards_2.png" alt="Image 2" onclick="setMain('assets/images/edwards_2.png')">
+          <img src="assets/images/edwards_3.png" alt="Image 3" onclick="setMain('assets/images/edwards_3.png')">
+          <img src="assets/images/edwards_4.png" alt="Image 4" onclick="setMain('assets/images/edwards_4.png')">
+        </div>
+      </div>
+
+      <div class="grid section">
+        <div class="card">
+          <h3>Key Facts</h3>
+          <ul>
+            <li><strong>For Sale:</strong> $199,000  •  <strong>For Rent:</strong> $1,366/mo</li>
+            <li><strong>Beds:</strong> 3  •  <strong>Baths:</strong> 2  •  <strong>Size:</strong> 1,516 sqft</li>
+            <li><strong>Price/Sqft:</strong> $131  •  <strong>Lot:</strong> 4,791.6 sqft</li>
+            <li><strong>Special:</strong> Hardwood floors, spacious bedrooms</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Description</h3>
+          <p>
+            Priced to sell! Welcome to 176 Edwards St located in Bridgeport in a great little neighborhood.
+            This home offers 4 spacious bedrooms, 2 full bathrooms, 1,516 sq ft, hardwood floors, tile and so much more!
+            <strong>Note:</strong> Home has fire damage. Motivated to sell—bring ALL offers!
+          </p>
+        </div>
+      </div>
+
+      <div class="section">
+        <button class="btn btn-primary" onclick="openTourModal('176-Edwards', '176 Edwards Street, Bridgeport, CT 06606')">
+          Request Tour
+        </button>
+        <span class="badge">Tour fee required</span>
+      </div>
+    </article>
+  </div>
+</main>
+
+<footer class="footer">
+  <div class="container inner">
+    <span>© <span id="year"></span> M.Durham Properties & Rentals. All rights reserved.</span>
+    <a href="about.html">About</a>
+  </div>
+</footer>
+<button id="backToTop" onclick="backToTop()" aria-label="Back to top">↑</button>
+
+<div class="modal-backdrop" id="tourModal" role="dialog" aria-modal="true" aria-labelledby="tourTitle">
+  <div class="modal">
+    <button class="close-x" onclick="closeTourModal()" aria-label="Close">✕</button>
+    <h3 id="tourTitle">Request a Tour</h3>
+    <p class="small">Tour requests require a fee and are non‑refundable.</p>
+
+    <div class="option-cards">
+      <div class="option-card" id="rentCard" onclick="selectCard('rent')" role="button" tabindex="0" aria-pressed="false">
+        <div class="title"><strong>Tour for Rent</strong></div>
+        <div>$25 USDT</div>
+      </div>
+      <div class="option-card" id="buyCard" onclick="selectCard('buy')" role="button" tabindex="0" aria-pressed="false">
+        <span class="recommended">Recommended</span>
+        <div class="title"><strong>Tour for Buy</strong></div>
+        <div>$50 USDT</div>
+      </div>
+    </div>
+
+    <form id="tourForm" onsubmit="submitTour(event)">
+      <label class="label" for="tour_name">Full Name</label>
+      <input class="input" type="text" id="tour_name" name="name" required>
+
+      <label class="label" for="tour_email">Email</label>
+      <input class="input" type="email" id="tour_email" name="email" required>
+
+      <label class="label" for="tour_phone">Phone</label>
+      <input class="input" type="tel" id="tour_phone" name="phone" required>
+
+      <input type="hidden" id="tour_property" name="property" value="">
+      <input type="hidden" id="tour_type" name="request_type" value="">
+
+      <label class="label" for="tour_msg">Message (optional)</label>
+      <textarea class="input" id="tour_msg" name="message" rows="3" placeholder="Preferred date/time, questions, etc."></textarea>
+
+      <div class="actions">
+        <button type="button" class="btn" onclick="closeTourModal()">Cancel</button>
+        <button type="submit" class="btn btn-primary">Continue to Payment</button>
+      </div>
+    </form>
+
+    <details style="margin-top:10px">
+      <summary><strong>FAQ – Tour fee</strong></summary>
+      <p class="small">
+        • Rent tour fee: <strong>$25 USDT</strong>. • Buy tour fee: <strong>$50 USDT</strong>.<br/>
+        Fees are non‑refundable and help us schedule, prepare, and host your viewing.
+        You’ll receive confirmation by email after payment.
+      </p>
+    </details>
+  </div>
+</div>
+
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
